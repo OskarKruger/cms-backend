@@ -287,3 +287,6 @@ C:\Users\Oskar\Documents\kode Projekter\cms_backend\Cms_Backend\Cms_Backend\obj\
 C:\Users\Oskar\Documents\kode Projekter\cms_backend\Cms_Backend\Cms_Backend\obj\Debug\net6.0\Cms_Backend.pdb
 C:\Users\Oskar\Documents\kode Projekter\cms_backend\Cms_Backend\Cms_Backend\obj\Debug\net6.0\Cms_Backend.genruntimeconfig.cache
 C:\Users\Oskar\Documents\kode Projekter\cms_backend\Cms_Backend\Cms_Backend\obj\Debug\net6.0\ref\Cms_Backend.dll
+C:\Users\Bruger\Documents\Code\cms.backend\Cms_Backend\obj\Debug\net6.0\Cms_Backend.dll
+C:\Users\Bruger\Documents\Code\cms.backend\Cms_Backend\obj\Debug\net6.0\refint\Cms_Backend.dll
+C:\Users\Bruger\Documents\Code\cms.backend\Cms_Backend\obj\Debug\net6.0\Cms_Backend.pdb
