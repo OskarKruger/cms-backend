@@ -10915,19 +10915,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Oskar\\.nuget\\packages\\": {}
+    "C:\\Users\\Bruger\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Oskar\\Documents\\kode Projekter\\cms_backend\\Cms_Backend\\Cms_Backend\\Cms_Backend.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\Documents\\Code\\Ny mappe\\Cms_Backend\\Cms_Backend.csproj",
       "projectName": "Cms_Backend",
-      "projectPath": "C:\\Users\\Oskar\\Documents\\kode Projekter\\cms_backend\\Cms_Backend\\Cms_Backend\\Cms_Backend.csproj",
-      "packagesPath": "C:\\Users\\Oskar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Oskar\\Documents\\kode Projekter\\cms_backend\\Cms_Backend\\Cms_Backend\\obj\\",
+      "projectPath": "C:\\Users\\Bruger\\Documents\\Code\\Ny mappe\\Cms_Backend\\Cms_Backend.csproj",
+      "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bruger\\Documents\\Code\\Ny mappe\\Cms_Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Oskar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11019,7 +11019,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
