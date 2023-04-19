@@ -29,6 +29,12 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 
 var app = builder.Build();
 
+//add CORS
+app.UseCors(options =>
+    options.WithOrigins("*")
+        .AllowAnyHeader()
+        .AllowAnyMethod());
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

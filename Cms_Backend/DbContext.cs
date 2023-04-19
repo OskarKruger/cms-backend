@@ -11,5 +11,7 @@ namespace Cms_Backend
 
         public DbSet<Product> Users { get; set; }
 
+        public DbSet<Cms_Backend.Model.Customer>? Customer { get; set; }
+
     }
 }

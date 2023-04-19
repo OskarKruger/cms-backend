@@ -6,6 +6,4 @@
         public string ProductName { get; set; }
         public decimal ProductCost { get; set; }
     }
-
-
 }
