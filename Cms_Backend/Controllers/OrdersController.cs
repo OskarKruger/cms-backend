@@ -122,6 +122,33 @@ namespace Cms_Backend.Controllers
                 await transaction.RollbackAsync();
                 return BadRequest($"An error occurred while creating the order: {ex.Message}");
             }
+
+        }
+        //DELETE: api/Orders/DeleteOrders/5
+        [HttpDelete("DeleteOrders/{id}")]
+        public async Task<ActionResult<Order>> DeleteOrder(Guid id)
+        {
+            using MySqlConnection connection = new(_connectionString);
+            await connection.OpenAsync();
+            using var transaction = await connection.BeginTransactionAsync();
+            try
+            {
+                using MySqlCommand deleteOrderCommand = new(@"DELETE FROM orders WHERE id = @id", connection);
+                deleteOrderCommand.Transaction = transaction; // Associate the command with the transaction
+                deleteOrderCommand.Parameters.AddWithValue("@id", id);
+                await deleteOrderCommand.ExecuteNonQueryAsync();
+                using MySqlCommand deleteOrderItemCommand = new(@"DELETE FROM order_items WHERE order_id = @order_id", connection);
+                deleteOrderItemCommand.Transaction = transaction; // Associate the command with the transaction
+                deleteOrderItemCommand.Parameters.AddWithValue("@order_id", id);
+                await deleteOrderItemCommand.ExecuteNonQueryAsync();
+                await transaction.CommitAsync();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                return BadRequest($"An error occurred while deleting the order: {ex.Message}");
+            }
         }
     }
 }

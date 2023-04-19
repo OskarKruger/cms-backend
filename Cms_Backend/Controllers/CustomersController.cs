@@ -99,6 +99,30 @@ namespace Cms_Backend.Controllers
                 return BadRequest($"An error occurred while creating the customer: {ex.Message}");
             }
         }
+        // DELETE: api/Customers/5
+        [HttpDelete("DeleteCustomers/{id}")]
+        public async Task<ActionResult<Customer>> DeleteCustomer(string id)
+        {
+            using MySqlConnection connection = new(_connectionString);
+            await connection.OpenAsync();
+            using var transaction = await connection.BeginTransactionAsync();
+            try
+            {
+                // Delete customer data from the customers table
+                using MySqlCommand deleteCustomerCommand = new(@"DELETE FROM customers
+                                                      WHERE id = @id", connection);
+                deleteCustomerCommand.Transaction = transaction; // Associate the command with the transaction
+                deleteCustomerCommand.Parameters.AddWithValue("@id", id);
+                await deleteCustomerCommand.ExecuteNonQueryAsync();
+                await transaction.CommitAsync();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                return BadRequest($"An error occurred while deleting the customer: {ex.Message}");
+            }
+        }
 
     }
 }
